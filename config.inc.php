@@ -27,12 +27,12 @@ Typecho_Common::init();
 /** 定义数据库参数 */
 $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
-  'host' => 'databasehost',
-  'user' => 'databaseuser',
-  'password' => 'password',
+  'host' => 'roundhouse.proxy.rlwy.net',
+  'user' => 'root',
+  'password' => 'HBgDfB-55d1ahAH6GBabc6dH5fccACBA',
   'charset' => 'utf8mb4',
-  'port' => 'port',
-  'database' => 'databasename',
+  'port' => '48742',
+  'database' => 'railway',
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
 Typecho_Db::set($db);
