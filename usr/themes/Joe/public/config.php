@@ -34,11 +34,6 @@ $fontUrl = $this->options->JCustomFont;
 // elseif (strpos($fontUrl, 'ttf') !== false) $fontFormat = 'truetype';
 // elseif (strpos($fontUrl, 'eot') !== false) $fontFormat = 'embedded-opentype';
 // elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
-if (strpos($fontUrl, 'woff2') !== false) $fontFormat = 'woff2';
-elseif (strpos($fontUrl, 'woff') !== false) $fontFormat = 'woff';
-elseif (strpos($fontUrl, 'ttf') !== false) $fontFormat = 'truetype';
-elseif (strpos($fontUrl, 'eot') !== false) $fontFormat = 'embedded-opentype';
-elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 ?>
 <style>
   @font-face {
