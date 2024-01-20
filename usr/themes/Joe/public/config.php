@@ -13,9 +13,27 @@
     MOTTO: `<?php _getAsideAuthorMotto() ?>`,
     PAGE_SIZE: `<?php $this->parameter->pageSize() ?>`
   }
+     /* Functions: Before */
+     function before ($here, $inthat){
+    return substr($inthat, 0, strpos($inthat, $here));
+}
+/* Functions: After */
+function after ($here, $inthat){
+    if (!is_bool(strpos($inthat, $here)))
+    return substr($inthat, strpos($inthat,$here)+strlen($here));
+}   
+/* Functions: Between */
+function between ($here, $that, $inthat){
+    return before ($that, after($here, $inthat));
+}
 </script>
 <?php
 $fontUrl = $this->options->JCustomFont;
+// if (strpos($fontUrl, 'woff2') !== false) $fontFormat = 'woff2';
+// elseif (strpos($fontUrl, 'woff') !== false) $fontFormat = 'woff';
+// elseif (strpos($fontUrl, 'ttf') !== false) $fontFormat = 'truetype';
+// elseif (strpos($fontUrl, 'eot') !== false) $fontFormat = 'embedded-opentype';
+// elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 if (strpos($fontUrl, 'woff2') !== false) $fontFormat = 'woff2';
 elseif (strpos($fontUrl, 'woff') !== false) $fontFormat = 'woff';
 elseif (strpos($fontUrl, 'ttf') !== false) $fontFormat = 'truetype';
