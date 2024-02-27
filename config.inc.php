@@ -29,9 +29,9 @@ $db = new Typecho_Db('Pdo_Mysql', 'typecho_');
 $db->addServer(array (
   'host' => 'roundhouse.proxy.rlwy.net',
   'user' => 'root',
-  'password' => 'HBgDfB-55d1ahAH6GBabc6dH5fccACBA',
+  'password' => '513EBH14-EHfChEFh6d5H42-eH6BBCBH',
   'charset' => 'utf8mb4',
-  'port' => '48742',
+  'port' => '27723',
   'database' => 'railway',
   'engine' => 'MyISAM',
 ), Typecho_Db::READ | Typecho_Db::WRITE);
